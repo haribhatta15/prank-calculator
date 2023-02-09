@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  font-size: rem;
+  min-height: 100vh;
+  background: linear-gradient(rgba(255, 166, 0, 0.531), rgba(0, 248, 0, 0.379));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  padding: 1rem;
+  background: rgba(115, 0, 255, 0.604);
+  width: 500px;
+  border-radius: 10px;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "display display display display"
+    "ac c perc divide"
+    "btn7 btn8 btn9 x"
+    "btn4 btn5 btn6 minus"
+    "btn1 btn2 btn3 plus"
+    "btn0 btn0 dot equal";
+
+  z-index: 99;
+  backdrop-filter: blur(5px);
+}
+
+.prank {
+  animation: shake 0.5s ease-in;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(10px);
+  }
+}
+
+.calculator div {
+  margin: 1rem;
+  font-size: 1.5rem;
+  height: 50px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 1px 10px black;
+}
+
+.calculator div.display {
+  grid-area: display;
+  padding: 2rem;
+  text-align: end;
+  font-family: "Michroma", sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+/* cirlle------------------------------- */
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(rgb(119, 77, 255), rgb(254, 75, 75));
+  top: 290px;
+  right: 590px;
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 100px;
+}
+
+.btn-ac {
+  grid-area: ac;
+}
+/* .btn.btn-ac {
+  background: rgba(0, 55, 255, 0.586);
+} */
+
+.btn-c {
+  grid-area: c;
+}
+/* .btn.btn-c {
+  background: rgba(0, 55, 255, 0.586);
+} */
+
+.btn-perc {
+  grid-area: perc;
+}
+/* .btn.btn-perc {
+  background: rgba(0, 55, 255, 0.586);
+} */
+
+.btn-divide {
+  grid-area: divide;
+}
+
+.btn.btn-divide {
+  color: white;
+  background: orange;
+}
+.btn-7 {
+  grid-area: btn7;
+}
+
+.btn-8 {
+  grid-area: btn8;
+}
+
+.btn-9 {
+  grid-area: btn9;
+}
+
+.btn-x {
+  grid-area: x;
+}
+
+.btn.btn-x {
+  color: white;
+  background: orange;
+}
+
+.btn-4 {
+  grid-area: btn4;
+}
+
+.btn-5 {
+  grid-area: btn5;
+}
+
+.btn-6 {
+  grid-area: btn6;
+}
+
+.btn-minus {
+  grid-area: minus;
+}
+
+.btn.btn-minus {
+  color: white;
+  background: orange;
+}
+
+.btn-1 {
+  grid-area: btn1;
+}
+
+.btn-2 {
+  grid-area: btn2;
+}
+
+.btn-3 {
+  grid-area: btn3;
+}
+
+.btn-plus {
+  grid-area: plus;
+}
+
+.btn.btn-plus {
+  color: white;
+  background: orange;
+}
+
+.btn-0 {
+  grid-area: btn0;
+}
+/* .btn.btn-0 {
+  background: red;
+} */
+
+.btn-dot {
+  grid-area: dot;
+}
+
+.btn-equal {
+  grid-area: equal;
+}
+.btn.btn-equal {
+  background: orange;
+  color: white;
+}
